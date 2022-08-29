@@ -146,6 +146,47 @@ with st.form('enem_survey'):
         'Sim, três.',
         'Sim, quatro ou mais.'])}[num_banheiros]
 
+    nacionalidade = st.selectbox('Qual é a sua nacionalidade?', ['Brasileiro(a)',
+        'Brasileiro(a) Naturalizado(a)',
+        'Estrangeiro(a)',
+        'Brasileiro(a) Nato(a), nascido(a) no exterior'])
+    nacionalidade = {j:i+1 for i,j in enumerate(['Brasileiro(a)',
+        'Brasileiro(a) Naturalizado(a)',
+        'Estrangeiro(a)',
+        'Brasileiro(a) Nato(a), nascido(a) no exterior'])}[nacionalidade]
+
+    sexo = st.selectbox('Qual é o seu sexo?', ['Masculino', 'Feminino'])
+    sexo = {0:'Masculino', 1:'Feminino'}[sexo]
+
+    num_freezer = st.selectbox('Na sua residência tem freezer (independente ou segunda porta da geladeira)?', ['Não.',
+        'Sim, um.',
+        'Sim, dois.',
+        'Sim, três.',
+        'Sim, quatro ou mais.'])
+    num_freezer = {j:i+1 for i,j in enumerate(['Não.',
+        'Sim, um.',
+        'Sim, dois.',
+        'Sim, três.',
+        'Sim, quatro ou mais.'])}[num_freezer]
+
+    empregada_dom = st.selectbox('Na sua casa trabalha empregada doméstica?', ['Não.'
+        'Sim, um ou dois dias por semana.'
+        'Sim, três ou quatro dias por semana.'
+        'Sim, pelo menos cinco dias por semana.'])
+    empregada_dom = {j:i+1 for i.j in enumerate(['Não.'
+        'Sim, um ou dois dias por semana.'
+        'Sim, três ou quatro dias por semana.'
+        'Sim, pelo menos cinco dias por semana.'])}[empregada_dom]
+
+    sit_conclusao = st.selectbox('Sobre a sua conclusão do ensino médio:', ['Já concluí o Ensino Médio',
+        'Estou cursando e concluirei o Ensino Médio no ano corrente',
+        'Estou cursando e concluirei o Ensino Médio após o ano corrente',
+        'Não concluí e não estou cursando o Ensino Médio'])
+    sit_conclusao = {j:i+1 for i,j in enumerate(['Já concluí o Ensino Médio',
+        'Estou cursando e concluirei o Ensino Médio no ano corrente',
+        'Estou cursando e concluirei o Ensino Médio após o ano corrente',
+        'Não concluí e não estou cursando o Ensino Médio'])}
+
     
 
     
