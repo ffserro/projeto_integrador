@@ -357,7 +357,7 @@ if enviar:
     st.write('# {:.2f}'.format(lgb_model.predict(pd.DataFrame(respostas))[0]))
 
 if st.checkbox('Quero ver as métricas do modelo'):
-    kpi1, kpi2, kpi3, kp4 = st.columns(4)
+    kpi1, kpi2, kpi3, kpi4 = st.columns(4)
 
     kpi1.metric(
         label="MAE",
