@@ -352,6 +352,7 @@ respostas = {
     }
 
 if enviar:
+    st.write(pd.DataFrame(respostas))
     st.write(lgb_model.predict(pd.DataFrame(respostas)))
 
 fig, ax = plt.subplots(1,1, figsize=(10,20))
