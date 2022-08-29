@@ -6,7 +6,7 @@ st.title('Projeto integrador')
 
 lgb_model = lgb.Booster(model_file='./LightGBMModel.txt')
 
-fig, ax = plt.subplots(1,1)
+fig, ax = plt.subplots(1,1, figsize=(10,15))
 lgb.plot_importance(lgb_model, ax=ax)
 
 st.pyplot(fig)
