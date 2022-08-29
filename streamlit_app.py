@@ -92,6 +92,48 @@ with st.form('enem_survey'):
         'Sim, três.',
         'Sim, quatro ou mais.'])}[num_computador]
 
+    num_televisao = st.selectbox('Na sua residência tem televisão em cores?', ['Não.',
+        'Sim, uma.',
+        'Sim, duas.',
+        'Sim, três.',
+        'Sim, quatro ou mais.'])
+    num_televisao = {j:i+1 for i,j in enumerate(['Não.',
+        'Sim, uma.',
+        'Sim, duas.',
+        'Sim, três.',
+        'Sim, quatro ou mais.'])}[num_televisao]
+
+    ocupacao_mae = st.selectbox('A partir da apresentação de algumas ocupações divididas em grupos ordenados, indique o grupo que contempla a ocupação mais próxima da ocupação da sua mãe ou da mulher responsável por você. (Se ela não estiver trabalhando, escolha uma ocupação pensando no último trabalho dela).',
+        ['Grupo 1: Lavradora, agricultora sem empregados, bóia fria, criadora de animais (gado, porcos, galinhas, ovelhas, cavalos etc.), apicultora, pescadora, lenhadora, seringueira, extrativista.',
+        'Grupo 2: Diarista, empregada doméstica, cuidadora de idosos, babá, cozinheira (em casas particulares), motorista particular, jardineira, faxineira de empresas e prédios, vigilante, porteira, carteira, office-boy, vendedora, caixa, atendente de loja, auxiliar administrativa, recepcionista, servente de pedreiro, repositora de mercadoria.',
+        'Grupo 3: Padeira, cozinheira industrial ou em restaurantes, sapateira, costureira, joalheira, torneira mecânica, operadora de máquinas, soldadora, operária de fábrica, trabalhadora da mineração, pedreira, pintora, eletricista, encanadora, motorista, caminhoneira, taxista.',
+        'Grupo 4: Professora (de ensino fundamental ou médio, idioma, música, artes etc.), técnica (de enfermagem, contabilidade, eletrônica etc.), policial, militar de baixa patente (soldado, cabo, sargento), corretora de imóveis, supervisora, gerente, mestre de obras, pastora, microempresária (proprietária de empresa com menos de 10 empregados), pequena comerciante, pequena proprietária de terras, trabalhadora autônoma ou por conta própria.',
+        'Grupo 5: Médica, engenheira, dentista, psicóloga, economista, advogada, juíza, promotora, defensora, delegada, tenente, capitã, coronel, professora universitária, diretora em empresas públicas ou privadas, política, proprietária de empresas com mais de 10 empregados.',
+        'Não sei.'])
+    ocupacao_mae = {j:i+1 for i,j, in enumerate(['Grupo 1: Lavradora, agricultora sem empregados, bóia fria, criadora de animais (gado, porcos, galinhas, ovelhas, cavalos etc.), apicultora, pescadora, lenhadora, seringueira, extrativista.',
+        'Grupo 2: Diarista, empregada doméstica, cuidadora de idosos, babá, cozinheira (em casas particulares), motorista particular, jardineira, faxineira de empresas e prédios, vigilante, porteira, carteira, office-boy, vendedora, caixa, atendente de loja, auxiliar administrativa, recepcionista, servente de pedreiro, repositora de mercadoria.',
+        'Grupo 3: Padeira, cozinheira industrial ou em restaurantes, sapateira, costureira, joalheira, torneira mecânica, operadora de máquinas, soldadora, operária de fábrica, trabalhadora da mineração, pedreira, pintora, eletricista, encanadora, motorista, caminhoneira, taxista.',
+        'Grupo 4: Professora (de ensino fundamental ou médio, idioma, música, artes etc.), técnica (de enfermagem, contabilidade, eletrônica etc.), policial, militar de baixa patente (soldado, cabo, sargento), corretora de imóveis, supervisora, gerente, mestre de obras, pastora, microempresária (proprietária de empresa com menos de 10 empregados), pequena comerciante, pequena proprietária de terras, trabalhadora autônoma ou por conta própria.',
+        'Grupo 5: Médica, engenheira, dentista, psicóloga, economista, advogada, juíza, promotora, defensora, delegada, tenente, capitã, coronel, professora universitária, diretora em empresas públicas ou privadas, política, proprietária de empresas com mais de 10 empregados.',
+        'Não sei.'])}[ocupacao_mae]
+
+    num_celular = st.selectbox('Na sua residência tem telefone celular?',
+        ['Não.',
+        'Sim, um.',
+        'Sim, dois.',
+        'Sim, três.',
+        'Sim, quatro ou mais.'])
+    num_celular = {j:i+1 for i,j in enumerate(['Não.',
+        'Sim, um.',
+        'Sim, dois.',
+        'Sim, três.',
+        'Sim, quatro ou mais.'])}[num_celular]
+
+    tipo_escola = st.selectbox('Tipo de escola do Ensino Médio', ['Federal', 'Estadual', 'Municipal', 'Privada'])
+    tipo_escola = {j:i+1 for i,j in enumerate(['Federal', 'Estadual', 'Municipal', 'Privada'])}[tipo_escola]
+
+    tipo_lingua = st.selectbox('Qual foi a língua estrangeira escolhida para a prova?', ['Inglês', 'Espanhol'])
+
     
 
 
