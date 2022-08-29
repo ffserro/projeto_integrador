@@ -359,7 +359,7 @@ if enviar:
 if st.checkbox('Quero ver as métricas do modelo'):
     kpi1, kpi2, kpi3, kp4 = st.columns(4)
 
-     kpi1.metric(
+    kpi1.metric(
         label="MAE",
         value='-'
     )
