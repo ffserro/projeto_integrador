@@ -64,7 +64,7 @@ with st.form('enem_survey'):
         'Grupo 5: Médico, engenheiro, dentista, psicólogo, economista, advogado, juiz, promotor, defensor, delegado, tenente, capitão, coronel, professor universitário, diretor em empresas públicas ou privadas, político, proprietário de empresas com mais de 10 empregados.',
         'Não sei.'])}[ocupacao_pai]
 
-    escolaridade_pai = st.select_box('Até que série seu pai, ou o homem responsável por você, estudou?', ['Nunca estudou.',
+    escolaridade_pai = st.selectbox('Até que série seu pai, ou o homem responsável por você, estudou?', ['Nunca estudou.',
         'Não completou a 4ª série/5º ano do Ensino Fundamental.',
         'Completou a 4ª série/5º ano, mas não completou a 8ª série/9º ano do Ensino Fundamental.',
         'Completou a 8ª série/9º ano do Ensino Fundamental, mas não completou o Ensino Médio.',
