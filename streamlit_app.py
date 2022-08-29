@@ -241,7 +241,7 @@ with st.form('enem_survey'):
     tv_assinatura = {'Não.':1, 'Sim.':2}[tv_assinatura]
 
     dvd = st.selectbox('Na sua residência tem aparelho de DVD?', ['Não.', 'Sim.'])
-    dvd = {1:'Não.', 2:'Sim.'}[dvd]
+    dvd = {'Não.':1, 'Sim.':2}[dvd]
 
     aspirador = st.selectbox('Na sua residência tem aspirador de pó?', ['Não.', 'Sim.'])
     aspirador = {1:'Não.', 2:'Sim.'}[aspirador]
