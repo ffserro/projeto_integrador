@@ -249,59 +249,59 @@ with st.form('enem_survey'):
     tel_fixo = st.selectbox('Na sua residência tem telefone fixo?', ['Não.', 'Sim.'])
     tel_fixo = {'Não.':1, 'Sim.':2}[tel_fixo]
 
-    num_maqsecar = st.selectbox('Na sua residência tem máquina secar roupas? (independente ou em conjunto com a máquina de lavar)', ['Não.'
-        'Sim, uma.'
-        'Sim, duas.'
-        'Sim, três.'
+    num_maqsecar = st.selectbox('Na sua residência tem máquina secar roupas? (independente ou em conjunto com a máquina de lavar)', ['Não.',
+        'Sim, uma.',
+        'Sim, duas.',
+        'Sim, três.',
         'Sim, quatro ou mais.'])
-    num_maqsecar = {j:i+1 for i,j in enumerate(['Não.'
-        'Sim, uma.'
-        'Sim, duas.'
-        'Sim, três.'
+    num_maqsecar = {j:i+1 for i,j in enumerate(['Não.',
+        'Sim, uma.',
+        'Sim, duas.',
+        'Sim, três.',
         'Sim, quatro ou mais.'])}[num_maqsecar]
 
-    num_microondas = st.selectbox('Na sua residência tem forno de microondas?', ['Não.'
-        'Sim, uma.'
-        'Sim, duas.'
-        'Sim, três.'
+    num_microondas = st.selectbox('Na sua residência tem forno de microondas?', ['Não.',
+        'Sim, uma.',
+        'Sim, duas.',
+        'Sim, três.',
         'Sim, quatro ou mais.'])
-    num_microondas = {j:i+1 for i,j in enumerate(['Não.'
-        'Sim, uma.'
-        'Sim, duas.'
-        'Sim, três.'
+    num_microondas = {j:i+1 for i,j in enumerate(['Não.',
+        'Sim, uma.',
+        'Sim, duas.',
+        'Sim, três.',
         'Sim, quatro ou mais.'])}[num_microondas]
 
-    num_motocicleta = st.selectbox('Na sua residência tem motocicleta?', ['Não.'
-        'Sim, uma.'
-        'Sim, duas.'
-        'Sim, três.'
+    num_motocicleta = st.selectbox('Na sua residência tem motocicleta?', ['Não.',
+        'Sim, uma.',
+        'Sim, duas.',
+        'Sim, três.',
         'Sim, quatro ou mais.'])
-    num_motocicleta = {j:i+1 for i,j in enumerate(['Não.'
-        'Sim, uma.'
-        'Sim, duas.'
-        'Sim, três.'
+    num_motocicleta = {j:i+1 for i,j in enumerate(['Não.',
+        'Sim, uma.',
+        'Sim, duas.',
+        'Sim, três.',
         'Sim, quatro ou mais.'])}[num_motocicleta]
 
-    num_geladeira = st.selectbox('Na sua residência tem geladeira?', ['Não.'
-        'Sim, uma.'
-        'Sim, duas.'
-        'Sim, três.'
+    num_geladeira = st.selectbox('Na sua residência tem geladeira?', ['Não.',
+        'Sim, uma.',
+        'Sim, duas.',
+        'Sim, três.',
         'Sim, quatro ou mais.'])
-    num_geladeira = {j:i+1 for i,j in enumerate(['Não.'
-        'Sim, uma.'
-        'Sim, duas.'
-        'Sim, três.'
+    num_geladeira = {j:i+1 for i,j in enumerate(['Não.',
+        'Sim, uma.',
+        'Sim, duas.',
+        'Sim, três.',
         'Sim, quatro ou mais.'])}[num_geladeira]
 
-    num_lavalouca = st.selectbox('Na sua residência tem máquina de lavar louças?', ['Não.'
-        'Sim, uma.'
-        'Sim, duas.'
-        'Sim, três.'
+    num_lavalouca = st.selectbox('Na sua residência tem máquina de lavar louças?', ['Não.',
+        'Sim, uma.',
+        'Sim, duas.',
+        'Sim, três.',
         'Sim, quatro ou mais.'])
-    num_lavalouca = {j:i+1 for i,j in enumerate(['Não.'
-        'Sim, uma.'
-        'Sim, duas.'
-        'Sim, três.'
+    num_lavalouca = {j:i+1 for i,j in enumerate(['Não.',
+        'Sim, uma.',
+        'Sim, duas.',
+        'Sim, três.',
         'Sim, quatro ou mais.'])}[num_lavalouca]
 
     treineiro = st.selectbox('Você fez a prova apenas para testar seus conhecimentos?', ['Não.', 'Sim.'])
