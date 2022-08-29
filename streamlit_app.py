@@ -129,8 +129,14 @@ with st.form('enem_survey'):
         'Sim, três.',
         'Sim, quatro ou mais.'])}[num_celular]
 
-    tipo_escola = st.selectbox('Tipo de escola do Ensino Médio', ['Federal', 'Estadual', 'Municipal', 'Privada'])
-    tipo_escola = {j:i for i,j in enumerate(['Federal', 'Estadual', 'Municipal', 'Privada'])}[tipo_escola]
+    tipo_escola = st.selectbox('Tipo de escola do Ensino Médio', [
+'Pública'
+'Privada'
+'Exterior'])
+    tipo_escola = {j:i+2 for i,j in enumerate([
+'Pública'
+'Privada'
+'Exterior'])}[tipo_escola]
 
     tipo_lingua = st.selectbox('Qual foi a língua estrangeira escolhida para a prova?', ['Inglês', 'Espanhol'])
     tipo_lingua = {j:i for i,j in enumerate(['Inglês', 'Espanhol'])}[tipo_lingua]
@@ -304,78 +310,38 @@ with st.form('enem_survey'):
     acesso_internet = st.selectbox('Sua residência tem acesso à internet?', ['Sim.', 'Não.'])
     acesso_internet = {'Sim.':2, 'Não.':1}[acesso_internet]
 
-    respostas = {NU_INSCRICAO	Número de inscrição1 
-CO_MUNICIPIO_RESIDENCIA	Código do município de residência 
-	1º dígito: Região
-	1º e 2º dígitos: UF
-	3º, 4º, 5º e 6º dígitos: Município
-	7º dígito: dígito verificador
-NO_MUNICIPIO_RESIDENCIA	Nome do município de residência
-CO_UF_RESIDENCIA	Código da Unidade da Federação de residência
-SG_UF_RESIDENCIA	Sigla da Unidade da Federação de residência
-NU_IDADE	Idade2
-TP_SEXO	Sexo
+    respostas = { 
+
+'TP_FAIXA_ETARIA':idade,
+
+'TP_SEXO':sexo,
 	
-TP_ESTADO_CIVIL	Estado Civil
+'TP_ESTADO_CIVIL': estado_civil,
 	
 	
 	
 	
-TP_COR_RACA	Cor/raça
+'TP_COR_RACA': cor_raca,
 	
 	
 	
 	
 	
-TP_NACIONALIDADE	Nacionalidade
+'TP_NACIONALIDADE':nacionalidade,
+	
+	
+
+'TP_ST_CONCLUSAO': sit_conclusao,
 	
 	
 	
+'TP_ANO_CONCLUIU': ano_conclusao,
+
+'TP_ESCOLA': tipo_escola,
 	
-CO_MUNICIPIO_NASCIMENTO	Código do município de nascimento
-	1º dígito: Região
-	1º e 2º dígitos: UF
-	3º, 4º, 5º e 6º dígitos: Município
-	7º dígito: dígito verificador
-NO_MUNICIPIO_NASCIMENTO	Nome do município de nascimento
-CO_UF_NASCIMENTO	Código da Unidade da Federação de nascimento
-SG_UF_NASCIMENTO	Sigla da Unidade da Federação de nascimento
-TP_ST_CONCLUSAO	Situação de conclusão do Ensino Médio
-	
-	
-	
-TP_ANO_CONCLUIU	Ano de Conclusão do Ensino Médio
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-TP_ESCOLA	Tipo de escola do Ensino Médio
-	
-	
-	
-TP_ENSINO	Tipo de instituição que concluiu ou concluirá o Ensino Médio 
-	
-	
-IN_TREINEIRO	Indica se o inscrito fez a prova com intuito de apenas treinar seus conhecimentos3
-CO_ESCOLA	Código da Escola4
-"CO_MUNICIPIO_ESC
-"	Código do município da escola 
-	1º dígito: Região
-	1º e 2º dígitos: UF
-	3º, 4º, 5º e 6º dígitos: Município
-	7º dígito: dígito verificador
-NO_MUNICIPIO_ESC	Nome do município da escola
-CO_UF_ESC	Código da Unidade da Federação da escola
-SG_UF_ESC	Sigla da Unidade da Federação da escola
+
+'IN_TREINEIRO': treineiro
+
 TP_DEPENDENCIA_ADM_ESC	Dependência administrativa (Escola)
 	
 	
