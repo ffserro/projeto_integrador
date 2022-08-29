@@ -220,11 +220,316 @@ with st.form('enem_survey'):
         'Sim, três.',
         'Sim, quatro ou mais.'])}[num_quartos]
     
+    num_maqlavar = st.selectbox('Na sua residência tem máquina de lavar roupa? (o tanquinho NÃO deve ser considerado)', ['Não.'
+        'Sim, uma.'
+        'Sim, duas.'
+        'Sim, três.'
+        'Sim, quatro ou mais.'])
+    num_maqlavar = {j:i+1 for i,j in enumerate(['Não.'
+        'Sim, uma.'
+        'Sim, duas.'
+        'Sim, três.'
+        'Sim, quatro ou mais.'])}[num_maqlavar]
 
+    tv_assinatura = st.selectbox('Na sua residência tem TV por assinatura?', ['Não.', 'Sim.'])
+    tv_assinatura = {1:'Não.', 2:'Sim.'}[tv_assinatura]
 
+    dvd = st.selectbox('Na sua residência tem aparelho de DVD?', ['Não.', 'Sim.'])
+    dvd = {1:'Não.', 2:'Sim.'}[dvd]
+
+    aspirador = st.selectbox('Na sua residência tem aspirador de pó?', ['Não.', 'Sim.'])
+    aspirador = {1:'Não.', 2:'Sim.'}[aspirador]
     
+    tel_fixo = st.selectbox('Na sua residência tem telefone fixo?', ['Não.', 'Sim.'])
+    tel_fixo = {1:'Não.', 2:'Sim.'}[tel_fixo]
 
+    num_maqsecar = st.selectbox('Na sua residência tem máquina secar roupas? (independente ou em conjunto com a máquina de lavar)', ['Não.'
+        'Sim, uma.'
+        'Sim, duas.'
+        'Sim, três.'
+        'Sim, quatro ou mais.'])
+    num_maqsecar = {j:i+1 for i,j in enumerate(['Não.'
+        'Sim, uma.'
+        'Sim, duas.'
+        'Sim, três.'
+        'Sim, quatro ou mais.'])}[num_maqsecar]
 
+    num_microondas = st.selectbox('Na sua residência tem forno de microondas?', ['Não.'
+        'Sim, uma.'
+        'Sim, duas.'
+        'Sim, três.'
+        'Sim, quatro ou mais.'])
+    num_microondas = {j:i+1 for i,j in enumerate(['Não.'
+        'Sim, uma.'
+        'Sim, duas.'
+        'Sim, três.'
+        'Sim, quatro ou mais.'])}[num_microondas]
+
+    num_motocicleta = st.selectbox('Na sua residência tem motocicleta?', ['Não.'
+        'Sim, uma.'
+        'Sim, duas.'
+        'Sim, três.'
+        'Sim, quatro ou mais.'])
+    num_motocicleta = {j:i+1 for i,j in enumerate(['Não.'
+        'Sim, uma.'
+        'Sim, duas.'
+        'Sim, três.'
+        'Sim, quatro ou mais.'])}[num_motocicleta]
+
+    num_geladeira = st.selectbox('Na sua residência tem geladeira?', ['Não.'
+        'Sim, uma.'
+        'Sim, duas.'
+        'Sim, três.'
+        'Sim, quatro ou mais.'])
+    num_geladeira = {j:i+1 for i,j in enumerate(['Não.'
+        'Sim, uma.'
+        'Sim, duas.'
+        'Sim, três.'
+        'Sim, quatro ou mais.'])}[num_geladeira]
+
+    num_lavalouca = st.selectbox('Na sua residência tem máquina de lavar louças?', ['Não.'
+        'Sim, uma.'
+        'Sim, duas.'
+        'Sim, três.'
+        'Sim, quatro ou mais.'])
+    num_lavalouca = {j:i+1 for i,j in enumerate(['Não.'
+        'Sim, uma.'
+        'Sim, duas.'
+        'Sim, três.'
+        'Sim, quatro ou mais.'])}[num_lavalouca]
+
+    treineiro = st.selectbox('Você fez a prova apenas para testar seus conhecimentos?', ['Não.', 'Sim.'])
+    treineiro = {'Sim.':1, 'Não.':0}[treineiro]
+
+    acesso_internet = st.selectbox('Sua residência tem acesso à internet?', ['Sim.', 'Não.'])
+    acesso_internet = {'Sim.':2, 'Não.':1}[acesso_internet]
+
+    respostas = {NU_INSCRICAO	Número de inscrição1 
+CO_MUNICIPIO_RESIDENCIA	Código do município de residência 
+	1º dígito: Região
+	1º e 2º dígitos: UF
+	3º, 4º, 5º e 6º dígitos: Município
+	7º dígito: dígito verificador
+NO_MUNICIPIO_RESIDENCIA	Nome do município de residência
+CO_UF_RESIDENCIA	Código da Unidade da Federação de residência
+SG_UF_RESIDENCIA	Sigla da Unidade da Federação de residência
+NU_IDADE	Idade2
+TP_SEXO	Sexo
+	
+TP_ESTADO_CIVIL	Estado Civil
+	
+	
+	
+	
+TP_COR_RACA	Cor/raça
+	
+	
+	
+	
+	
+TP_NACIONALIDADE	Nacionalidade
+	
+	
+	
+	
+CO_MUNICIPIO_NASCIMENTO	Código do município de nascimento
+	1º dígito: Região
+	1º e 2º dígitos: UF
+	3º, 4º, 5º e 6º dígitos: Município
+	7º dígito: dígito verificador
+NO_MUNICIPIO_NASCIMENTO	Nome do município de nascimento
+CO_UF_NASCIMENTO	Código da Unidade da Federação de nascimento
+SG_UF_NASCIMENTO	Sigla da Unidade da Federação de nascimento
+TP_ST_CONCLUSAO	Situação de conclusão do Ensino Médio
+	
+	
+	
+TP_ANO_CONCLUIU	Ano de Conclusão do Ensino Médio
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+TP_ESCOLA	Tipo de escola do Ensino Médio
+	
+	
+	
+TP_ENSINO	Tipo de instituição que concluiu ou concluirá o Ensino Médio 
+	
+	
+IN_TREINEIRO	Indica se o inscrito fez a prova com intuito de apenas treinar seus conhecimentos3
+CO_ESCOLA	Código da Escola4
+"CO_MUNICIPIO_ESC
+"	Código do município da escola 
+	1º dígito: Região
+	1º e 2º dígitos: UF
+	3º, 4º, 5º e 6º dígitos: Município
+	7º dígito: dígito verificador
+NO_MUNICIPIO_ESC	Nome do município da escola
+CO_UF_ESC	Código da Unidade da Federação da escola
+SG_UF_ESC	Sigla da Unidade da Federação da escola
+TP_DEPENDENCIA_ADM_ESC	Dependência administrativa (Escola)
+	
+	
+	
+TP_LOCALIZACAO_ESC	Localização (Escola)
+	
+TP_SIT_FUNC_ESC	Situação de funcionamento (Escola)
+	
+TP_LINGUA	Língua Estrangeira 
+Q001	Até que série seu pai, ou o homem responsável por você, estudou?
+	
+	
+	
+	
+	
+	
+	
+Q002	Até que série sua mãe, ou a mulher responsável por você, estudou?
+	
+	
+	
+	
+	
+	
+	
+Q003	A partir da apresentação de algumas ocupações divididas em grupos ordenados, indique o grupo que contempla a ocupação mais próxima da ocupação do seu pai ou do homem responsável por você. (Se ele não estiver trabalhando, escolha uma ocupação pensando no último trabalho dele).
+	
+	
+	
+	
+	
+Q004	A partir da apresentação de algumas ocupações divididas em grupos ordenados, indique o grupo que contempla a ocupação mais próxima da ocupação da sua mãe ou da mulher responsável por você. (Se ela não estiver trabalhando, escolha uma ocupação pensando no último trabalho dela).
+	
+	
+	
+	
+	
+Q005	Incluindo você, quantas pessoas moram atualmente em sua residência?
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+Q006	Qual é a renda mensal de sua família? (Some a sua renda com a dos seus familiares.)
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+Q007	Em sua residência trabalha empregado(a) doméstico(a)?
+	
+	
+	
+Q008	Na sua residência tem banheiro?
+	
+	
+	
+	
+Q009	Na sua residência tem quartos para dormir?
+	
+	
+	
+	
+Q010	Na sua residência tem carro?
+	
+	
+	
+	
+Q011	Na sua residência tem motocicleta?
+	
+	
+	
+	
+Q012	Na sua residência tem geladeira?
+	
+	
+	
+	
+Q013	Na sua residência tem freezer (independente ou segunda porta da geladeira)?
+	
+	
+	
+	
+Q014	Na sua residência tem máquina de lavar roupa? (o tanquinho NÃO deve ser considerado)
+	
+	
+	
+	
+Q015	Na sua residência tem máquina de secar roupa (independente ou em conjunto com a máquina de lavar roupa)?
+	
+	
+	
+	
+Q016	Na sua residência tem forno micro-ondas?
+	
+	
+	
+	
+Q017	Na sua residência tem máquina de lavar louça?
+	
+	
+	
+	
+Q018	Na sua residência tem aspirador de pó?
+	
+Q019	Na sua residência tem televisão em cores?
+	
+	
+	
+	
+Q020	Na sua residência tem aparelho de DVD?
+	
+Q021	Na sua residência tem TV por assinatura?
+	
+Q022	Na sua residência tem telefone celular?
+	
+	
+	
+	
+Q023	Na sua residência tem telefone fixo?
+	
+Q024	Na sua residência tem computador?
+	
+	
+	
+	
+Q025	Na sua residência tem acesso à Internet?
+		
+}
     
 fig, ax = plt.subplots(1,1, figsize=(10,20))
 lgb.plot_importance(lgb_model, ax=ax)
