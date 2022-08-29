@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 lgb_model = lgb.Booster(model_file='./LightGBMModel.txt')
 
-st.markdown('# Digital House <img src="https://s3-sa-east-1.amazonaws.com/prod-jobsite-files.kenoby.com/uploads/digitalhouse-1647868655-552x368png.png" alt="Digital House" style="display:inline-block;margin-left:auto;margin-right:auto;width:10%">', unsafe_allow_html=True)
+st.markdown('<img src="https://s3-sa-east-1.amazonaws.com/prod-jobsite-files.kenoby.com/uploads/digitalhouse-1647868655-552x368png.png" alt="Digital House" style="display:inline-block;margin-left:auto;margin-right:auto;width:100%">', unsafe_allow_html=True)
 
 st.write('## Projeto integrador II')
 
