@@ -311,90 +311,42 @@ with st.form('enem_survey'):
     acesso_internet = {'Sim.':2, 'Não.':1}[acesso_internet]
 
     respostas = { 
-
-'TP_FAIXA_ETARIA':idade,
-
-'TP_SEXO':sexo,
-	
-'TP_ESTADO_CIVIL': estado_civil,
-	
-	
-	
-	
-'TP_COR_RACA': cor_raca,
-	
-	
-	
-	
-	
-'TP_NACIONALIDADE':nacionalidade,
-	
-	
-
-'TP_ST_CONCLUSAO': sit_conclusao,
-	
-	
-	
-'TP_ANO_CONCLUIU': ano_conclusao,
-
-'TP_ESCOLA': tipo_escola,
-	
-
-'IN_TREINEIRO': treineiro,
-	
-'TP_LINGUA': tipo_lingua, 
-
-'Q001': escolaridade_pai,
-
-'Q002': escolaridade_mae,
-
-'Q003':	ocupacao_pai,
-
-'Q004':	ocupacao_mae,
-	
-'Q005':	pessoas_cohab,
-		
-'Q006':	renda_familiar,
-
-'Q007':	empregada_dom,
-
-'Q008':	num_banheiros,
-
-'Q009':	num_quartos,
-
-'Q010':	num_carro,
-
-'Q011':	num_motocicleta,
-	
-'Q012':	num_geladeira,
-
-'Q013':	num_freezer,
-
-'Q014':	num_maqlavar,
-	
-'Q015':	num_maqsecar,
-
-'Q016':	num_microondas,
-
-'Q017':	num_lavalouca,
-
-'Q018':	aspirador,
-	
-'Q019':	num_televisao,
-	
-'Q020':	dvd,
-	
-'Q021':	tv_assinatura,
-	
-'Q022':	num_celular,
-
-'Q023':	tel_fixo,
-	
-'Q024':	num_computador,
-
-'Q025':	acesso_internet
-		
-}
+        'TP_FAIXA_ETARIA':idade,
+        'TP_SEXO':sexo,
+        'TP_ESTADO_CIVIL': estado_civil,
+        'TP_COR_RACA': cor_raca,
+        'TP_NACIONALIDADE':nacionalidade,
+        'TP_ST_CONCLUSAO': sit_conclusao,
+        'TP_ANO_CONCLUIU': ano_conclusao,
+        'TP_ESCOLA': tipo_escola,
+        'IN_TREINEIRO': treineiro,
+        'TP_LINGUA': tipo_lingua, 
+        'Q001': escolaridade_pai,
+        'Q002': escolaridade_mae,
+        'Q003':	ocupacao_pai,
+        'Q004':	ocupacao_mae,
+        'Q005':	pessoas_cohab,
+        'Q006':	renda_familiar,
+        'Q007':	empregada_dom,
+        'Q008':	num_banheiros,
+        'Q009':	num_quartos,
+        'Q010':	num_carro,
+        'Q011':	num_motocicleta,	
+        'Q012':	num_geladeira,
+        'Q013':	num_freezer,
+        'Q014':	num_maqlavar,	
+        'Q015':	num_maqsecar,
+        'Q016':	num_microondas,
+        'Q017':	num_lavalouca,
+        'Q018':	aspirador,	
+        'Q019':	num_televisao,	
+        'Q020':	dvd,	
+        'Q021':	tv_assinatura,	
+        'Q022':	num_celular,
+        'Q023':	tel_fixo,	
+        'Q024':	num_computador,
+        'Q025':	acesso_internet		
+        }
     
 fig, ax = plt.subplots(1,1, figsize=(10,20))
 lgb.plot_importance(lgb_model, ax=ax)
