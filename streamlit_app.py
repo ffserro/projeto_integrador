@@ -313,6 +313,7 @@ with st.form('enem_survey'):
     enviar = form_submit_button('Enviar')
 
     if enviar:
+        pass
 
 respostas = { 
     'TP_FAIXA_ETARIA':idade,
