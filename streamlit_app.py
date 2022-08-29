@@ -352,8 +352,8 @@ respostas = {
     }
 
 if enviar:
-    st.write(pd.DataFrame(respostas))
-    st.write(lgb_model.predict(pd.DataFrame(respostas)))
+    
+    st.write(lgb_model.predict(pd.DataFrame(respostas))[0])
 
 fig, ax = plt.subplots(1,1, figsize=(10,20))
 lgb.plot_importance(lgb_model, ax=ax)
