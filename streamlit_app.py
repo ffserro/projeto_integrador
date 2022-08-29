@@ -192,7 +192,7 @@ with st.form('enem_survey'):
         'Sim, dois.',
         'Sim, três.',
         'Sim, quatro ou mais.'])
-    num_carro = {j:i+1 for i.j in enumerate(['Não.',
+    num_carro = {j:i+1 for i,j in enumerate(['Não.',
         'Sim, um.',
         'Sim, dois.',
         'Sim, três.',
