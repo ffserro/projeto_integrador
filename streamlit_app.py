@@ -369,7 +369,7 @@ if st.checkbox('Quero ver as métricas do modelo'):
         value='-'
     )
 
-     kpi3.metric(
+    kpi3.metric(
         label="RMSE",
         value='-'
     )
