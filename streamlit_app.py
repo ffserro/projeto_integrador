@@ -226,15 +226,15 @@ with st.form('enem_survey'):
         'Sim, três.',
         'Sim, quatro ou mais.'])}[num_quartos]
     
-    num_maqlavar = st.selectbox('Na sua residência tem máquina de lavar roupa? (o tanquinho NÃO deve ser considerado)', ['Não.'
-        'Sim, uma.'
-        'Sim, duas.'
-        'Sim, três.'
+    num_maqlavar = st.selectbox('Na sua residência tem máquina de lavar roupa? (o tanquinho NÃO deve ser considerado)', ['Não.',
+        'Sim, uma.',
+        'Sim, duas.',
+        'Sim, três.',
         'Sim, quatro ou mais.'])
-    num_maqlavar = {j:i+1 for i,j in enumerate(['Não.'
-        'Sim, uma.'
-        'Sim, duas.'
-        'Sim, três.'
+    num_maqlavar = {j:i+1 for i,j in enumerate(['Não.',
+        'Sim, uma.',
+        'Sim, duas.',
+        'Sim, três.',
         'Sim, quatro ou mais.'])}[num_maqlavar]
 
     tv_assinatura = st.selectbox('Na sua residência tem TV por assinatura?', ['Não.', 'Sim.'])
