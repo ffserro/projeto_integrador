@@ -352,7 +352,7 @@ respostas = {
     }
 
 if enviar:
-    
+    st.write('# A sua nota prevista é de:')
     st.write(lgb_model.predict(pd.DataFrame(respostas))[0])
 
 fig, ax = plt.subplots(1,1, figsize=(10,20))
