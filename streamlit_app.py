@@ -192,7 +192,7 @@ with st.form('enem_survey'):
     sit_conclusao = {j:i+1 for i,j in enumerate(['Já concluí o Ensino Médio',
         'Estou cursando e concluirei o Ensino Médio no ano corrente',
         'Estou cursando e concluirei o Ensino Médio após o ano corrente',
-        'Não concluí e não estou cursando o Ensino Médio'])}
+        'Não concluí e não estou cursando o Ensino Médio'])}[sit_conclusao]
 
     num_carro = st.selectbox('Na sua casa tem carro?', ['Não.',
         'Sim, um.',
