@@ -355,7 +355,11 @@ if enviar:
     st.write('# A sua nota prevista é de:')
     st.write('# {:.2f}'.format(lgb_model.predict(pd.DataFrame(respostas))[0]))
 
-fig, ax = plt.subplots(1,1, figsize=(10,20))
-lgb.plot_importance(lgb_model, ax=ax)
+if st.checkbox('Quero ver as métricas do modelo'):
+    pass
 
-st.pyplot(fig)
+if st.checkbox('Quero ver a importância de cada uma das features'):
+    fig, ax = plt.subplots(1,1, figsize=(10,20))
+    lgb.plot_importance(lgb_model, ax=ax)
+
+    st.pyplot(fig)
