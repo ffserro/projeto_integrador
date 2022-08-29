@@ -169,13 +169,13 @@ with st.form('enem_survey'):
         'Sim, três.',
         'Sim, quatro ou mais.'])}[num_freezer]
 
-    empregada_dom = st.selectbox('Na sua casa trabalha empregada doméstica?', ['Não.'
-        'Sim, um ou dois dias por semana.'
-        'Sim, três ou quatro dias por semana.'
+    empregada_dom = st.selectbox('Na sua casa trabalha empregada doméstica?', ['Não.',
+        'Sim, um ou dois dias por semana.',
+        'Sim, três ou quatro dias por semana.',
         'Sim, pelo menos cinco dias por semana.'])
-    empregada_dom = {j:i+1 for i.j in enumerate(['Não.'
-        'Sim, um ou dois dias por semana.'
-        'Sim, três ou quatro dias por semana.'
+    empregada_dom = {j:i+1 for i.j in enumerate(['Não.',
+        'Sim, um ou dois dias por semana.',
+        'Sim, três ou quatro dias por semana.',
         'Sim, pelo menos cinco dias por semana.'])}[empregada_dom]
 
     sit_conclusao = st.selectbox('Sobre a sua conclusão do ensino médio:', ['Já concluí o Ensino Médio',
