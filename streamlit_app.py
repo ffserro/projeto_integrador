@@ -35,6 +35,8 @@ with st.form('enem_survey'):
         'Entre 61 e 65 anos': 18,
         'Entre 66 e 70 anos': 19,
         'Maior de 70 anos': 20}[idade]
+    ano_conclusao = st.selectbox('Em que ano você concluiu o Ensino Médio?', list(range(2019,2007,-1)) + ['Antes de 2008'])
+    
 
     
 fig, ax = plt.subplots(1,1, figsize=(10,20))
