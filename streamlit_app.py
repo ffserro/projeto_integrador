@@ -35,8 +35,65 @@ with st.form('enem_survey'):
         'Entre 61 e 65 anos': 18,
         'Entre 66 e 70 anos': 19,
         'Maior de 70 anos': 20}[idade]
-    ano_conclusao = st.selectbox('Em que ano você concluiu o Ensino Médio?', list(range(2019,2007,-1)) + ['Antes de 2008'])
+
+    ano_conclusao = st.selectbox('Em que ano você concluiu o Ensino Médio?', ['-'] + list(range(2019,2007,-1)) + ['Antes de 2008'])
+    ano_conclusao = {j:i for i,j in enumerate(['-'] + list(range(2019,2007,-1)) + ['Antes de 2008'])}[ano_conclusao]
+
+    renda_familiar = st.selectbox('Qual é a renda mensal da sua família (soma de todos)', ['Nenhuma renda.', 'Até R$ 998,00.', 'De R$ 998,01 até R$ 1.497,00.', 'De R$ 1.497,01 até R$ 1.996,00.', 'De R$ 1.996,01 até R$ 2.495,00.', 'De R$ 2.495,01 até R$ 2.994,00.', 'De R$ 2.994,01 até R$ 3.992,00.', 'De R$ 3.992,01 até R$ 4.990,00.', 'De R$ 4.990,01 até R$ 5.988,00.', 'De R$ 5.988,01 até R$ 6.986,00.', 'De R$ 6.986,01 até R$ 7.984,00.', 'De R$ 7.984,01 até R$ 8.982,00.', 'De R$ 8.982,01 até R$ 9.980,00.', 'De R$ 9.980,01 até R$ 11.976,00.', 'De R$ 11.976,01 até R$ 14.970,00.', 'De R$ 14.970,01 até R$ 19.960,00.', 'Mais de R$ 19.960,00.'])
+    renda_familiar = {j:i+1 for i, j in enumerate(['Nenhuma renda.', 'Até R$ 998,00.', 'De R$ 998,01 até R$ 1.497,00.', 'De R$ 1.497,01 até R$ 1.996,00.', 'De R$ 1.996,01 até R$ 2.495,00.', 'De R$ 2.495,01 até R$ 2.994,00.', 'De R$ 2.994,01 até R$ 3.992,00.', 'De R$ 3.992,01 até R$ 4.990,00.', 'De R$ 4.990,01 até R$ 5.988,00.', 'De R$ 5.988,01 até R$ 6.986,00.', 'De R$ 6.986,01 até R$ 7.984,00.', 'De R$ 7.984,01 até R$ 8.982,00.', 'De R$ 8.982,01 até R$ 9.980,00.', 'De R$ 9.980,01 até R$ 11.976,00.', 'De R$ 11.976,01 até R$ 14.970,00.', 'De R$ 14.970,01 até R$ 19.960,00.', 'Mais de R$ 19.960,00.'])}[renda_familiar]
+
+    pessoas_cohab = st.selectbox('Quantas pessoas, contando com você, atualmente moram na sua casa?', list(range(1,21)))
+
+    cor_raca = st.selectbox('Com que cor/raça você se identifica?', ['Não declarado', 'Branca', 'Preta', 'Parda', 'Amarela', 'Indígena'])
+    cor_raca = {j:i+1 for i,j in enumerate(['Não declarado', 'Branca', 'Preta', 'Parda', 'Amarela', 'Indígena'])}[cor_raca]
+
+    escolaridade_mae = st.selectbox('Até que série sua mãe (ou a mulher responsável por você) estudou?', ['Nunca estudou.', 'Não completou a 4ª série/5º ano do Ensino Fundamental.', 'Completou a 4ª série/5º ano, mas não completou a 8ª série/9º ano do Ensino Fundamental.', 'Completou a 8ª série/9º ano do Ensino Fundamental, mas não completou o Ensino Médio.', 'Completou o Ensino Médio, mas não completou a Faculdade.', 'Completou a Faculdade, mas não completou a Pós-graduação.', 'Completou a Pós-graduação.', 'Não sei.'])
+    escolaridade_mae = {j:i+1 for i, j in enumerate(['Nunca estudou.', 'Não completou a 4ª série/5º ano do Ensino Fundamental.', 'Completou a 4ª série/5º ano, mas não completou a 8ª série/9º ano do Ensino Fundamental.', 'Completou a 8ª série/9º ano do Ensino Fundamental, mas não completou o Ensino Médio.', 'Completou o Ensino Médio, mas não completou a Faculdade.', 'Completou a Faculdade, mas não completou a Pós-graduação.', 'Completou a Pós-graduação.', 'Não sei.'])}[escolaridade_mae]
+
+    ocupacao_pai = st.selectbox('A partir da apresentação de algumas ocupações divididas em grupos ordenados, indique o grupo que contempla a ocupação mais próxima da ocupação do seu pai ou do homem responsável por você. (Se ele não estiver trabalhando, escolha uma ocupação pensando no último trabalho dele).', 
+        ['Grupo 1: Lavrador, agricultor sem empregados, bóia fria, criador de animais (gado, porcos, galinhas, ovelhas, cavalos etc.), apicultor, pescador, lenhador, seringueiro, extrativista.',
+        'Grupo 2: Diarista, empregado doméstico, cuidador de idosos, babá, cozinheiro (em casas particulares), motorista particular, jardineiro, faxineiro de empresas e prédios, vigilante, porteiro, carteiro, office-boy, vendedor, caixa, atendente de loja, auxiliar administrativo, recepcionista, servente de pedreiro, repositor de mercadoria.',
+        'Grupo 3: Padeiro, cozinheiro industrial ou em restaurantes, sapateiro, costureiro, joalheiro, torneiro mecânico, operador de máquinas, soldador, operário de fábrica, trabalhador da mineração, pedreiro, pintor, eletricista, encanador, motorista, caminhoneiro, taxista.',
+        'Grupo 4: Professor (de ensino fundamental ou médio, idioma, música, artes etc.), técnico (de enfermagem, contabilidade, eletrônica etc.), policial, militar de baixa patente (soldado, cabo, sargento), corretor de imóveis, supervisor, gerente, mestre de obras, pastor, microempresário (proprietário de empresa com menos de 10 empregados), pequeno comerciante, pequeno proprietário de terras, trabalhador autônomo ou por conta própria.',
+        'Grupo 5: Médico, engenheiro, dentista, psicólogo, economista, advogado, juiz, promotor, defensor, delegado, tenente, capitão, coronel, professor universitário, diretor em empresas públicas ou privadas, político, proprietário de empresas com mais de 10 empregados.',
+        'Não sei.'])
+    ocupacao_pai = {j:i+1 for i,j in enumerate(['Grupo 1: Lavrador, agricultor sem empregados, bóia fria, criador de animais (gado, porcos, galinhas, ovelhas, cavalos etc.), apicultor, pescador, lenhador, seringueiro, extrativista.',
+        'Grupo 2: Diarista, empregado doméstico, cuidador de idosos, babá, cozinheiro (em casas particulares), motorista particular, jardineiro, faxineiro de empresas e prédios, vigilante, porteiro, carteiro, office-boy, vendedor, caixa, atendente de loja, auxiliar administrativo, recepcionista, servente de pedreiro, repositor de mercadoria.',
+        'Grupo 3: Padeiro, cozinheiro industrial ou em restaurantes, sapateiro, costureiro, joalheiro, torneiro mecânico, operador de máquinas, soldador, operário de fábrica, trabalhador da mineração, pedreiro, pintor, eletricista, encanador, motorista, caminhoneiro, taxista.',
+        'Grupo 4: Professor (de ensino fundamental ou médio, idioma, música, artes etc.), técnico (de enfermagem, contabilidade, eletrônica etc.), policial, militar de baixa patente (soldado, cabo, sargento), corretor de imóveis, supervisor, gerente, mestre de obras, pastor, microempresário (proprietário de empresa com menos de 10 empregados), pequeno comerciante, pequeno proprietário de terras, trabalhador autônomo ou por conta própria.',
+        'Grupo 5: Médico, engenheiro, dentista, psicólogo, economista, advogado, juiz, promotor, defensor, delegado, tenente, capitão, coronel, professor universitário, diretor em empresas públicas ou privadas, político, proprietário de empresas com mais de 10 empregados.',
+        'Não sei.'])}[ocupacao_pai]
+
+    escolaridade_pai = st.select_box('Até que série seu pai, ou o homem responsável por você, estudou?', ['Nunca estudou.',
+        'Não completou a 4ª série/5º ano do Ensino Fundamental.',
+        'Completou a 4ª série/5º ano, mas não completou a 8ª série/9º ano do Ensino Fundamental.',
+        'Completou a 8ª série/9º ano do Ensino Fundamental, mas não completou o Ensino Médio.',
+        'Completou o Ensino Médio, mas não completou a Faculdade.',
+        'Completou a Faculdade, mas não completou a Pós-graduação.',
+        'Completou a Pós-graduação.',
+        'Não sei.'])
+    escolaridade_pai = {j:i+1 for i,j in enumerate(['Nunca estudou.',
+        'Não completou a 4ª série/5º ano do Ensino Fundamental.',
+        'Completou a 4ª série/5º ano, mas não completou a 8ª série/9º ano do Ensino Fundamental.',
+        'Completou a 8ª série/9º ano do Ensino Fundamental, mas não completou o Ensino Médio.',
+        'Completou o Ensino Médio, mas não completou a Faculdade.',
+        'Completou a Faculdade, mas não completou a Pós-graduação.',
+        'Completou a Pós-graduação.',
+        'Não sei.'])}[escolaridade_pai]
+
+    num_computador = st.selectbox('Na sua residência tem computador?', ['Não.',
+        'Sim, um.',
+        'Sim, dois.',
+        'Sim, três.',
+        'Sim, quatro ou mais.'])
+    num_computador = {j:i+1 for i,j in enumerate(['Não.',
+        'Sim, um.',
+        'Sim, dois.',
+        'Sim, três.',
+        'Sim, quatro ou mais.'])}[num_computador]
+
     
+
 
     
 fig, ax = plt.subplots(1,1, figsize=(10,20))
