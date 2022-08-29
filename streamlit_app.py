@@ -156,7 +156,7 @@ with st.form('enem_survey'):
         'Brasileiro(a) Nato(a), nascido(a) no exterior'])}[nacionalidade]
 
     sexo = st.selectbox('Qual é o seu sexo?', ['Masculino', 'Feminino'])
-    sexo = {0:'Masculino', 1:'Feminino'}[sexo]
+    sexo = {'Masculino':0, 'Feminino':0}[sexo]
 
     num_freezer = st.selectbox('Na sua residência tem freezer (independente ou segunda porta da geladeira)?', ['Não.',
         'Sim, um.',
