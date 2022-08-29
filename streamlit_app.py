@@ -244,10 +244,10 @@ with st.form('enem_survey'):
     dvd = {'Não.':1, 'Sim.':2}[dvd]
 
     aspirador = st.selectbox('Na sua residência tem aspirador de pó?', ['Não.', 'Sim.'])
-    aspirador = {1:'Não.', 2:'Sim.'}[aspirador]
+    aspirador = {'Não.':1, 'Sim.':2}[aspirador]
     
     tel_fixo = st.selectbox('Na sua residência tem telefone fixo?', ['Não.', 'Sim.'])
-    tel_fixo = {1:'Não.', 2:'Sim.'}[tel_fixo]
+    tel_fixo = {'Não.':1, 'Sim.':2}[tel_fixo]
 
     num_maqsecar = st.selectbox('Na sua residência tem máquina secar roupas? (independente ou em conjunto com a máquina de lavar)', ['Não.'
         'Sim, uma.'
