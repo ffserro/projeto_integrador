@@ -1,4 +1,4 @@
 pandas
 numpy
 streamlit
-h2o
+lightgbm

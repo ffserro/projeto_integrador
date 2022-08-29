@@ -1,4 +1,4 @@
 import streamlit as st
-import h2o
+import lightgbm
 
 st.title('Projeto integrador')
