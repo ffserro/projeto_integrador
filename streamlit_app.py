@@ -187,6 +187,39 @@ with st.form('enem_survey'):
         'Estou cursando e concluirei o Ensino Médio após o ano corrente',
         'Não concluí e não estou cursando o Ensino Médio'])}
 
+    num_carro = st.selectbox('Na sua casa tem carro?', ['Não.',
+        'Sim, um.',
+        'Sim, dois.',
+        'Sim, três.',
+        'Sim, quatro ou mais.'])
+    num_carro = {j:i+1 for i.j in enumerate(['Não.',
+        'Sim, um.',
+        'Sim, dois.',
+        'Sim, três.',
+        'Sim, quatro ou mais.'])}
+
+    estado_civil = st.selectbox('Qual é o seu estado civil?', [
+        'Solteiro(a)',
+        'Casado(a)/Mora com companheiro(a)',
+        'Divorciado(a)/Desquitado(a)/Separado(a)',
+        'Viúvo(a)'])
+    estado_civil = {j:i+1 for i,j in enumerate([
+        'Solteiro(a)',
+        'Casado(a)/Mora com companheiro(a)',
+        'Divorciado(a)/Desquitado(a)/Separado(a)',
+        'Viúvo(a)'])}[estado_civil]
+
+    num_quartos = st.selectbox('Na sua casa tem quartos para dormir?', ['Não.',
+        'Sim, um.',
+        'Sim, dois.',
+        'Sim, três.',
+        'Sim, quatro ou mais.'])
+    num_quartos = {j:i+1 for i,j in enumerate(['Não.',
+        'Sim, um.',
+        'Sim, dois.',
+        'Sim, três.',
+        'Sim, quatro ou mais.'])}[num_quartos
+    
     
 
     
