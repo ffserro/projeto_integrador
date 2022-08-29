@@ -218,9 +218,9 @@ with st.form('enem_survey'):
         'Sim, um.',
         'Sim, dois.',
         'Sim, três.',
-        'Sim, quatro ou mais.'])}[num_quartos
+        'Sim, quatro ou mais.'])}[num_quartos]
     
-    
+
 
     
 
