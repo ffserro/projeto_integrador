@@ -130,9 +130,10 @@ with st.form('enem_survey'):
         'Sim, quatro ou mais.'])}[num_celular]
 
     tipo_escola = st.selectbox('Tipo de escola do Ensino Médio', ['Federal', 'Estadual', 'Municipal', 'Privada'])
-    tipo_escola = {j:i+1 for i,j in enumerate(['Federal', 'Estadual', 'Municipal', 'Privada'])}[tipo_escola]
+    tipo_escola = {j:i for i,j in enumerate(['Federal', 'Estadual', 'Municipal', 'Privada'])}[tipo_escola]
 
     tipo_lingua = st.selectbox('Qual foi a língua estrangeira escolhida para a prova?', ['Inglês', 'Espanhol'])
+    tipo_lingua = {j:i for i,j in enumerate(['Inglês', 'Espanhol'])}[tipo_lingua]
 
     
 
