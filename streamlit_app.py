@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 import lightgbm as lgb
 import matplotlib.pyplot as plt
 
@@ -312,9 +313,6 @@ with st.form('enem_survey'):
 
     enviar = st.form_submit_button('Enviar')
 
-    if enviar:
-        pass
-
 respostas = { 
     'TP_FAIXA_ETARIA':idade,
     'TP_SEXO':sexo,
@@ -352,7 +350,10 @@ respostas = {
     'Q024':	num_computador,
     'Q025':	acesso_internet		
     }
-    
+
+if enviar:
+    st.write(lgb_model.predict(pd.DataFrame(respostas)))
+
 fig, ax = plt.subplots(1,1, figsize=(10,20))
 lgb.plot_importance(lgb_model, ax=ax)
 
