@@ -238,7 +238,7 @@ with st.form('enem_survey'):
         'Sim, quatro ou mais.'])}[num_maqlavar]
 
     tv_assinatura = st.selectbox('Na sua residência tem TV por assinatura?', ['Não.', 'Sim.'])
-    tv_assinatura = {1:'Não.', 2:'Sim.'}[tv_assinatura]
+    tv_assinatura = {'Não.':1, 'Sim.':2}[tv_assinatura]
 
     dvd = st.selectbox('Na sua residência tem aparelho de DVD?', ['Não.', 'Sim.'])
     dvd = {1:'Não.', 2:'Sim.'}[dvd]
