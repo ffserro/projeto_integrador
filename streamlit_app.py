@@ -203,7 +203,7 @@ with st.form('enem_survey'):
         'Sim, um.',
         'Sim, dois.',
         'Sim, três.',
-        'Sim, quatro ou mais.'])}
+        'Sim, quatro ou mais.'])}[num_carro]
 
     estado_civil = st.selectbox('Qual é o seu estado civil?', [
         'Solteiro(a)',
