@@ -310,6 +310,10 @@ with st.form('enem_survey'):
     acesso_internet = st.selectbox('Sua residência tem acesso à internet?', ['Sim.', 'Não.'])
     acesso_internet = {'Sim.':2, 'Não.':1}[acesso_internet]
 
+    enviar = form_submit_button('Enviar')
+
+    if enviar:
+
     respostas = { 
         'TP_FAIXA_ETARIA':idade,
         'TP_SEXO':sexo,
