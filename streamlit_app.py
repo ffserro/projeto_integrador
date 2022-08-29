@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import lightgbm as lgb
 import matplotlib.pyplot as plt
+from sklearn import metrics
 
 lgb_model = lgb.Booster(model_file='./LightGBMModel.txt')
 
@@ -356,7 +357,27 @@ if enviar:
     st.write('# {:.2f}'.format(lgb_model.predict(pd.DataFrame(respostas))[0]))
 
 if st.checkbox('Quero ver as métricas do modelo'):
-    pass
+    kpi1, kpi2, kpi3, kp4 = st.columns(4)
+
+     kpi1.metric(
+        label="MAE",
+        value='-'
+    )
+
+    kpi2.metric(
+        label="MSE",
+        value='-'
+    )
+
+     kpi3.metric(
+        label="RMSE",
+        value='-'
+    )
+
+    kpi4.metric(
+        label="R2",
+        value='-'
+    )
 
 if st.checkbox('Quero ver a importância de cada uma das features'):
     fig, ax = plt.subplots(1,1, figsize=(10,20))
