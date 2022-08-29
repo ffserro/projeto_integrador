@@ -173,7 +173,7 @@ with st.form('enem_survey'):
         'Sim, um ou dois dias por semana.',
         'Sim, três ou quatro dias por semana.',
         'Sim, pelo menos cinco dias por semana.'])
-    empregada_dom = {j:i+1 for i.j in enumerate(['Não.',
+    empregada_dom = {j:i+1 for i,j in enumerate(['Não.',
         'Sim, um ou dois dias por semana.',
         'Sim, três ou quatro dias por semana.',
         'Sim, pelo menos cinco dias por semana.'])}[empregada_dom]
