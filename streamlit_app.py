@@ -2,7 +2,7 @@ import streamlit as st
 import lightgbm as lgb
 import matplotlib.pyplot as plt
 
-st.markdown('<img src="digital_house.png">', unsafe_allow_html=True)
+st.markdown('<img src="digital_house.png" alt="Digital House">', unsafe_allow_html=True)
 st.write('# Digital House')
 st.write('## Projeto integrador II')
 st.write('### Eloá Bastos, Felipe Carvalho, Felipe Sêrro, Maiara Firmo, Pedro Aranha e Rafael Mello')
