@@ -135,6 +135,19 @@ with st.form('enem_survey'):
     tipo_lingua = st.selectbox('Qual foi a língua estrangeira escolhida para a prova?', ['Inglês', 'Espanhol'])
     tipo_lingua = {j:i for i,j in enumerate(['Inglês', 'Espanhol'])}[tipo_lingua]
 
+    num_banheiros = st.selectbox('Na sua casa tem banheiros?', ['Não.',
+        'Sim, um.',
+        'Sim, dois.',
+        'Sim, três.',
+        'Sim, quatro ou mais.'])
+    num_banheiros = {j:i+1 for i,j in enumerate(['Não.',
+        'Sim, um.',
+        'Sim, dois.',
+        'Sim, três.',
+        'Sim, quatro ou mais.'])}[num_banheiros]
+
+    
+
     
 
 
